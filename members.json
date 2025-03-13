@@ -1,5 +1,7 @@
 [
-    { "name": "张三", "role": "前端开发" },
-    { "name": "李四", "role": "后端开发" },
-    { "name": "王五", "role": "设计师" }
+    { "name": "Yuting Dong 55220403", "role": "Liaison" },
+    { "name": "Ziyang Li 21220824", "role": "R.A./Tester" },
+    { "name": "Yuxin Tang 37220519", "role": "Programmer" },
+    { "name": "Ziwen Wang 21220328", "role": "S.A." },
+    { "name": "Siyi Zhang 55220905", "role": "P.M." }
 ]
