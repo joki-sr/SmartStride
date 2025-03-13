@@ -6,7 +6,7 @@
     <title>我的网站</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
-        .news { margin-top: 20px; padding: 10px; background: #f8f8f8; border: 1px solid #ddd; }
+        .news { margin-top: 20px; padding: 10px; background: #4198e8; border: 1px solid #ddd; }
     </style>
 </head>
 <body>
@@ -18,6 +18,13 @@
         <ul id="news-list"></ul>
     </div>
 
+    <!-- 添加 Members 栏目 -->
+    <div class="members">
+        <h2>团队成员</h2>
+        <ul id="members-list">
+        </ul>
+    </div>
+
     <script>
         fetch('news.json')
             .then(response => response.json())
@@ -27,6 +34,18 @@
                     let li = document.createElement("li");
                     li.textContent = `${news.date}: ${news.title}`;
                     newsList.appendChild(li);
+                });
+            });
+
+            // 加载团队成员
+        fetch('members.json')
+            .then(response => response.json())
+            .then(data => {
+                const membersList = document.getElementById("members-list");
+                data.forEach(member => {
+                    let li = document.createElement("li");
+                    li.textContent = `${member.name} - ${member.role}`;
+                    membersList.appendChild(li);
                 });
             });
     </script>
