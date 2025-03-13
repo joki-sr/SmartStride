@@ -17,6 +17,14 @@
         <h2>最新新闻</h2>
         <ul id="news-list"></ul>
     </div>
+
+    <!-- 添加 Members 栏目 -->
+    <div class="members">
+        <h2>团队成员</h2>
+        <ul id="members-list">
+        </ul>
+    </div>
+    
     <script>
         fetch('news.json')
             .then(response => response.json())
