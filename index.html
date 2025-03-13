@@ -19,18 +19,17 @@
         .mermaid {
             font-family: Arial, sans-serif;
         }
-    
     </style>
 
     <!-- Gantt -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
-        mermaid.initialize({ startOnLoad: true });
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true });
+            mermaid.init(); // 手动初始化
+        });
     </script>
-
 </head>
-
-
 <body>
     <h1>Welcome to SmartStride</h1>
     <p>A lower limb recovery status detection system</p>
@@ -79,7 +78,7 @@
                 });
             });
 
-            // 加载团队成员
+        // 加载团队成员
         fetch('members.json')
             .then(response => response.json())
             .then(data => {
@@ -91,6 +90,5 @@
                 });
             });
     </script>
-
 </body>
 </html>
