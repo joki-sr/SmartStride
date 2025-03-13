@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .news { margin-top: 20px; padding: 10px; background: #f8f8f8; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>欢迎来到我的网站</h1>
+    <p>这是一个 GitHub Pages 托管的网站。</p>
+
+    <div class="news">
+        <h2>最新新闻</h2>
+        <ul id="news-list"></ul>
+    </div>
+
+    <script>
+        fetch('news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsList = document.getElementById("news-list");
+                data.forEach(news => {
+                    let li = document.createElement("li");
+                    li.textContent = `${news.date}: ${news.title}`;
+                    newsList.appendChild(li);
+                });
+            });
+    </script>
+</body>
+</html>
