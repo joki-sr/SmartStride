@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>SmartStride</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #41a2e8;}
-        .news { margin-top: 20px; padding: 10px; text-align: center; background: #41e8b0; border: 1px solid #b85959; }
+        body { font-family: Arial, sans-serif; text-align: center; background: #ffffff;}
+        .news { margin-top: 20px; padding: 10px; text-align: left; background: #4CAF50; border: 1px solid #b85959; }
+        .members { margin-top: 20px; padding: 10px; text-align: left; background: #4CAF50; border: 1px solid #b85959; }
         
         /* Gantt */
         .gantt-chart {
@@ -30,9 +31,17 @@
         });
     </script>
 </head>
+
+
+
 <body>
-    <h1>Welcome to SmartStride</h1>
-    <p>A lower limb recovery status detection system</p>
+    <!-- <h1>Welcome to SmartStride</h1>
+    <p>A lower limb recovery status detection system.</p>
+    <p>click <a href="https://github.com/joki-sr/SmartStride">here</a> to access our project repository on Github.</p> -->
+
+    <h1 style="font-size: 3rem; font-weight: bold; color: #4CAF50; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Welcome to SmartStride</h1>
+    <p style="font-size: 1.5rem; color: #333; font-style: italic;">Revolutionizing Lower Limb Recovery with Advanced Status Detection</p>
+    <p style="font-size: 1.2rem; color: #555;">Click <a href="https://github.com/joki-sr/SmartStride" style="color: #4CAF50; text-decoration: none; font-weight: bold;">here</a> to explore our project repository on GitHub.</p>
 
     <div class="news">
         <h2>Latest News</h2>
@@ -48,21 +57,22 @@
 
     <!-- Gantt -->
     <div class="gantt-chart">
-        <h2>项目进度甘特图</h2>
+        <h2>Project Progress</h2>
         <div class="mermaid">
             gantt
-                title 项目进度
+                title Project Progress
                 dateFormat  YYYY-MM-DD
-                section 设计
-                需求分析       :done,    des1, 2023-10-01, 2023-10-05
-                原型设计       :active,  des2, 2023-10-06, 2023-10-10
-                界面设计       :          des3, 2023-10-11, 2023-10-15
-                section 开发
-                前端开发       :          dev1, 2023-10-16, 2023-10-25
-                后端开发       :          dev2, 2023-10-20, 2023-10-30
-                section 测试
-                单元测试       :          test1, 2023-10-31, 2023-11-05
-                集成测试       :          test2, 2023-11-06, 2023-11-10
+                section Requirement Analysis
+                Requirement Analysis       :done,    des1, 2025-03-09, 2025-03-19
+                section Function & Algorithm Design
+                Prototype Design           :active,  des2, 2025-03-13, 2025-03-19
+                UI Design                  :         des3, 2025-03-20, 2025-03-26
+                section Development
+                Frontend Development       :         dev1, 2025-03-27, 2025-04-05
+                Backend Development        :         dev2, 2025-04-06, 2025-04-15
+                section Testing
+                Unit Testing               :         test1, 2025-04-16, 2025-04-22
+                Integration Testing        :         test2, 2025-04-23, 2025-05-07
         </div>
     </div>
     
