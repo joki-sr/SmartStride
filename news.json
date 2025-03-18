@@ -1,4 +1,30 @@
 [
-    {"date": "2025-03-14", "title": "Added News, Members, and Gantt Chart sections"},
-    {"date": "2025-03-13", "title": "Website deployment completed!"}
+    {
+        "date": "2025-03-18",
+        "title": "我们完成了详细用例的设计，参考【模块用例图】（link：https://github.com/joki-sr/SmartStride/blob/main/week2/our_module.png）和【文档】（link：https://github.com/joki-sr/SmartStride/blob/main/week2/DSD-module_for_my_group.md）"
+    },
+    {
+        "date": "2025-03-16",
+        "title": "经过讨论，我们决定主要负责模块实时处理与分析，对下肢运动的数据去噪并用机器学习方法判定用户下肢健康状况"
+    },
+    {
+        "date": "2025-03-15",
+        "title": "我们初步设计出了项目第一版用例图，参考【用例图】（link：https://github.com/joki-sr/SmartStride/blob/main/week2/over_all.png）和【文档】（link：https://github.com/joki-sr/SmartStride/blob/main/week2/DSD-module.md）"
+    },
+    {
+        "date": "2025-03-14",
+        "title": "我们完成了一次stand meeting，决定了项目的整体设计"
+    },
+    {
+        "date": "2025-03-14",
+        "title": "Added News, Members, and Gantt Chart sections"
+    },
+    {
+        "date": "2025-03-13",
+        "title": "Website deployment completed!"
+    },
+    {
+        "date": "2025-03-12",
+        "title": "我们在课堂上使用WIT IMU采集数据，并通过蓝牙传输到了笔记本上"
+    }
 ]
