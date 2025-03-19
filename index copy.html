@@ -32,7 +32,13 @@
     </script>
 </head>
 
+
+
 <body>
+    <!-- <h1>Welcome to SmartStride</h1>
+    <p>A lower limb recovery status detection system.</p>
+    <p>click <a href="https://github.com/joki-sr/SmartStride">here</a> to access our project repository on Github.</p> -->
+
     <h1 style="font-size: 3rem; font-weight: bold; color: #4CAF50; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Welcome to SmartStride</h1>
     <p style="font-size: 1.5rem; color: #333; font-style: italic;">Revolutionizing Lower Limb Recovery with Advanced Status Detection</p>
     <p style="font-size: 1.2rem; color: #555;">Click <a href="https://github.com/joki-sr/SmartStride" style="color: #4CAF50; text-decoration: none; font-weight: bold;">here</a> to explore our project repository on GitHub.</p>
@@ -42,11 +48,14 @@
         <ul id="news-list"></ul>
     </div>
 
+    <!-- 添加 Members 栏目 -->
     <div class="members">
         <h2>Team Members</h2>
-        <ul id="members-list"></ul>
+        <ul id="members-list">
+        </ul>
     </div>
 
+    <!-- Gantt -->
     <div class="gantt-chart">
         <h2>Project Progress</h2>
         <div class="mermaid">
@@ -68,44 +77,18 @@
     </div>
     
     <script>
-        const newsData = [
-            {
-                "date": "2025-03-18",
-                "title": "We have completed the design of detailed use cases, referring to <a href='https://github.com/joki-sr/SmartStride/blob/main/week2/our_module.png' target='_blank' style='color: #ff0000; font-weight: bold; text-decoration: underline;'>[Module Use Case Diagram]</a> and <a href='https://github.com/joki-sr/SmartStride/blob/main/week2/DSD-module_for_my_group.md' target='_blank' style='color: #ff0000; font-weight: bold; text-decoration: underline;'>[Document]</a>"
-            },
-            {
-                "date": "2025-03-16",
-                "title": "After discussion, we decided to be mainly responsible for real-time processing and analysis of the module, denoising lower limb motion data, and using machine learning methods to determine the user's lower limb health status"
-            },
-            {
-                "date": "2025-03-15",
-                "title": "We have initially designed the first version of the project's use case diagram, referring to <a href='https://github.com/joki-sr/SmartStride/blob/main/week2/over_all.png' target='_blank' style='color: #ff0000; font-weight: bold; text-decoration: underline;'>[Use Case Diagram]</a> and <a href='https://github.com/joki-sr/SmartStride/blob/main/week2/DSD-module.md' target='_blank' style='color: #ff0000; font-weight: bold; text-decoration: underline;'>[Document]</a>"
-            },
-            {
-                "date": "2025-03-14",
-                "title": "We completed a stand meeting and determined the overall project design"
-            },
-            {
-                "date": "2025-03-14",
-                "title": "Added News, Members, and Gantt Chart sections"
-            },
-            {
-                "date": "2025-03-13",
-                "title": "Website deployment completed!"
-            },
-            {
-                "date": "2025-03-12",
-                "title": "We collected data using WIT IMU in class and transmitted it to a laptop via Bluetooth"
-            }
-        ];
+        fetch('news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsList = document.getElementById("news-list");
+                data.forEach(news => {
+                    let li = document.createElement("li");
+                    li.textContent = `${news.date}: ${news.title}`;
+                    newsList.appendChild(li);
+                });
+            });
 
-        const newsList = document.getElementById("news-list");
-        newsData.forEach(news => {
-            let li = document.createElement("li");
-            li.innerHTML = `${news.date}: ${news.title}`;
-            newsList.appendChild(li);
-        });
-
+        // 加载团队成员
         fetch('members.json')
             .then(response => response.json())
             .then(data => {
