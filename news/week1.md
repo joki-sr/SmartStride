@@ -1,0 +1,1 @@
+Discuss preliminary plan and determine team division of labor
