@@ -1,7 +1,27 @@
 [
-    { "name": "Yuting Dong 55220403", "role": "Liaison" },
-    { "name": "Ziyang Li 21220824", "role": "R.A./Tester" },
-    { "name": "Yuxin Tang 37220519", "role": "Programmer" },
-    { "name": "Ziwen Wang 21220328", "role": "S.A." },
-    { "name": "Siyi Zhang 55220905", "role": "P.M." }
+    { 
+        "name": "Yuting Dong 55220403",
+        "role": "Liaison",
+        "cv": "https://github.com/joki-sr/SmartStride/blob/main/members/DONGYUTING.docx" 
+    },
+    { 
+        "name": "Ziyang Li 21220824",
+        "role": "R.A./Tester",
+        "cv": "https://github.com/joki-sr/SmartStride/blob/main/members/liziyang.docx" 
+    },
+    { 
+        "name": "Yuxin Tang 37220519",
+        "role": "Programmer",
+        "cv": "https://github.com/joki-sr/SmartStride/blob/main/members/TangYuxin.docx" 
+    },
+    { 
+        "name": "Ziwen Wang 21220328",
+        "role": "S.A.",
+        "cv": "https://github.com/joki-sr/SmartStride/blob/main/members/StudentCVTemplate_Jesse.docx" 
+    },
+    { 
+        "name": "Siyi Zhang 55220905",
+        "role": "P.M.",
+        "cv": "https://github.com/joki-sr/SmartStride/blob/main/members/ZhangSiyi.docx" 
+    }
 ]

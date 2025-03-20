@@ -113,14 +113,34 @@
             newsList.appendChild(li);
         });
 
+        // fetch('members.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const membersList = document.getElementById("members-list");
+        //         data.forEach(member => {
+        //             let li = document.createElement("li");
+        //             li.textContent = `${member.name} - ${member.role}`;
+        //             membersList.appendChild(li);
+        //         });
+        //     });
         fetch('members.json')
             .then(response => response.json())
             .then(data => {
                 const membersList = document.getElementById("members-list");
                 data.forEach(member => {
-                    let li = document.createElement("li");
-                    li.textContent = `${member.name} - ${member.role}`;
-                    membersList.appendChild(li);
+                let li = document.createElement("li");
+                
+                // 创建超链接元素
+                const link = document.createElement("a");
+                link.href = member.cv;
+                link.textContent = member.name;
+                link.target = "_blank"; // 在新标签页打开
+                
+                // 组合元素
+                li.appendChild(link);
+                li.appendChild(document.createTextNode(` - ${member.role}`));
+                
+                membersList.appendChild(li);
                 });
             });
     </script>
