@@ -1,0 +1,55 @@
+@startuml
+left to right direction
+
+actor Patient
+actor DatabaseAdmin
+
+rectangle System {
+    Patient --> (Connect Sensor)
+    Patient --> (Start Sensor Data Collection)
+    Patient --> (Stop Sensor Data Collection)
+
+    (Start Sensor Data Collection) --> (Temporary Data Storage)
+    (Temporary Data Storage) --> (Upload Data to Server)
+    (Upload Data to Server) --> (Abnormal Data Cleaning and filtering)
+    (Abnormal Data Cleaning and filtering) --> (Database CRUD)
+    (Database CRUD) --> (Long-term Cloud Storage)
+
+    DatabaseAdmin --> (Database CRUD)
+    DatabaseAdmin --> (Deliver Data to Analysis Team)
+    DatabaseAdmin --> (Store Analysis Team Data)
+    DatabaseAdmin --> (Deliver Analyzed Data to UI)
+}
+
+@enduml
+
+
+
+
+
+
+
+@startuml
+left to right direction
+
+actor 病患
+actor 数据库管理员
+
+rectangle 系统 {
+    病患 --> (连接传感器)
+    病患 --> (启动传感器收集数据)
+    病患 --> (关闭传感器收集数据)
+
+    (启动传感器收集数据) --> (暂存原始数据)
+    (暂存原始数据) --> (数据上传到服务器)
+    (数据上传到服务器) --> (异常数据清除)
+    (异常数据清除) --> (数据库增删改查)
+    (数据库增删改查) --> (长期云存储)
+
+    数据库管理员 --> (数据库增删改查)
+    数据库管理员 --> (数据交付分析组)
+    数据库管理员 --> (存储分析组生成的数据)
+    数据库管理员 --> (交付分析后的数据给UI展示)
+}
+
+@enduml
