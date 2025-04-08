@@ -12,7 +12,7 @@ This document covers the main needs of patients and database administrators and 
 
 ## **User case diagram**
 
-![EN_usercase](D:\学习资料\3-2学期课程\DSD\RA\EN_usercase.png)
+![EN_usercase](https://raw.githubusercontent.com/joki-sr/SmartStride/main/week4/EN_usercase.png)
 
 ## **End User（Patient）**  
 
