@@ -15,7 +15,7 @@ db_config = {
     'password': 'msMS123@_@',  # 替换为实际密码
     'database': 'dsd'
 }
-csv_file = './imu_data_2025-04-18-08-39-33.csv'  # 替换为实际文件路径
+csv_file = './imu_data_2025-04-19-13-04-59-20hz.csv'  # 替换为实际文件路径
 file_name = os.path.basename(csv_file)  # 获取文件名
 # 导入数据到dsd schema中的表
 schema_name = 'dsd'
