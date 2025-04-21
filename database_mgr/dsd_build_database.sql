@@ -4,10 +4,6 @@
 -- ------------------------------------------------------
 -- Server version	8.0.34
 
-CREATE SCHEMA dsd_test_db;
-
-USE dsd_test_db;
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -269,7 +265,8 @@ DROP TABLE IF EXISTS `patient`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `patient` (
   `patient_id` varchar(10) NOT NULL,
-  `name` varchar(10) NOT NULL,
+  `patient_pswd` varchar(50) DEFAULT NULL,
+  `name` varchar(10) DEFAULT NULL,
   `gender` enum('M','F') DEFAULT NULL,
   `disease` text,
   `doctor_id` varchar(10) DEFAULT NULL,
@@ -285,7 +282,7 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES ('P001','赵一','M','感冒','D001'),('P002','钱二','F','肺炎','D001'),('P003','孙三','M','高血压','D002'),('P004','李四','F','糖尿病','D003'),('P005','周五','M','哮喘','D003');
+INSERT INTO `patient` VALUES ('P001','123456','赵一','M','感冒','D001'),('P002','123456','钱二','F','肺炎','D001'),('P003','123456','孙三','M','高血压','D002'),('P004','123456','李四','F','糖尿病','D003'),('P005','123456','周五','M','哮喘','D003');
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -298,4 +295,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-21 13:38:03
+-- Dump completed on 2025-04-21 20:53:06

@@ -9,7 +9,8 @@ CREATE TABLE doctor (
 
 CREATE TABLE patient (
     patient_id VARCHAR(10) PRIMARY KEY,
-    name VARCHAR(10) NOT NULL,
+    patient_pswd VARCHAR(50),
+    name VARCHAR(10),
     gender ENUM('M','F'),
     disease TEXT,
     doctor_id VARCHAR(10),
@@ -38,12 +39,12 @@ INSERT INTO doctor (work_id, name, hospital_name) VALUES
 ('D002', '李四', '上海瑞金医院'),
 ('D003', '王五', '广州中山医院');
 
-INSERT INTO patient (patient_id, name, gender, disease, doctor_id) VALUES
-('P001', '赵一', 'M', '感冒', 'D001'),
-('P002', '钱二', 'F', '肺炎', 'D001'),
-('P003', '孙三', 'M', '高血压', 'D002'),
-('P004', '李四', 'F', '糖尿病', 'D003'),
-('P005', '周五', 'M', '哮喘', 'D003');
+INSERT INTO patient (patient_id, patient_pswd, name, gender, disease, doctor_id) VALUES
+('P001', '123456', '赵一', 'M', '感冒', 'D001'),
+('P002', '123456', '钱二', 'F', '肺炎', 'D001'),
+('P003', '123456', '孙三', 'M', '高血压', 'D002'),
+('P004', '123456', '李四', 'F', '糖尿病', 'D003'),
+('P005', '123456', '周五', 'M', '哮喘', 'D003');
 
 INSERT INTO coordinate (id, time, x, y, z) VALUES
 (1, '2025-04-16 10:00:00', 1.1, 2.2, 3.3),
