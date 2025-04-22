@@ -4,6 +4,9 @@
 -- ------------------------------------------------------
 -- Server version	8.0.34
 
+CREATE SCHEMA dsd_test_db;
+USE dsd_test_db;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -74,6 +77,7 @@ DROP TABLE IF EXISTS `doctor`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `doctor` (
   `work_id` varchar(10) NOT NULL,
+  `doctor_pswd` varchar(50) DEFAULT NULL,
   `name` varchar(10) NOT NULL,
   `hospital_name` varchar(20) NOT NULL,
   PRIMARY KEY (`work_id`)
@@ -86,7 +90,7 @@ CREATE TABLE `doctor` (
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES ('D001','张三','北京协和医院'),('D002','李四','上海瑞金医院'),('D003','王五','广州中山医院');
+INSERT INTO `doctor` VALUES ('D001','123456','张三','北京协和医院'),('D002','123456','李四','上海瑞金医院'),('D003','123456','王五','广州中山医院');
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,4 +299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-21 20:53:06
+-- Dump completed on 2025-04-22  8:13:13

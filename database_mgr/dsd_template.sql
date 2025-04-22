@@ -3,6 +3,7 @@ USE dsd;
 
 CREATE TABLE doctor (
     work_id VARCHAR(10) PRIMARY KEY,
+    doctor_pswd VARCHAR(50),
     name VARCHAR(10) NOT NULL,
     hospital_name VARCHAR(20) NOT NULL
 );
@@ -34,10 +35,10 @@ CREATE TABLE analyzed_data (
 --     history_data_name VARCHAR(50) NOT NULL
 -- );
 
-INSERT INTO doctor (work_id, name, hospital_name) VALUES
-('D001', '张三', '北京协和医院'),
-('D002', '李四', '上海瑞金医院'),
-('D003', '王五', '广州中山医院');
+INSERT INTO doctor (work_id, doctor_pswd, name, hospital_name) VALUES
+('D001', '123456', '张三', '北京协和医院'),
+('D002', '123456', '李四', '上海瑞金医院'),
+('D003', '123456', '王五', '广州中山医院');
 
 INSERT INTO patient (patient_id, patient_pswd, name, gender, disease, doctor_id) VALUES
 ('P001', '123456', '赵一', 'M', '感冒', 'D001'),
