@@ -1,4 +1,5 @@
 -- CREATE DATABASE test;
+CREATE SCHEMA dsd;
 USE dsd;
 
 CREATE TABLE doctor (
