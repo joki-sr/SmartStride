@@ -25,6 +25,14 @@ db_config = {
     'database': 'dsd'
 }
 
+# 选择重索引时的插值方法，'nearest' 表示使用最近的已有值进行填充
+# 其他可选方法包括：
+# - 'pad' 或 'ffill'：前向填充（使用前一个已知值）
+# - 'backfill' 或 'bfill'：后向填充（使用下一个已知值）
+# - 'nearest'：最近邻填充（使用距离目标最近的值）
+# 注意：这些方法只能用于排序过的索引（如 DatetimeIndex）
+reindex_method = 'nearest'
+
 ################################################################################
 
 
@@ -69,7 +77,7 @@ def clean_and_store_sensor_data(csv_file, db_config, frequency=10):
 
             try:
                 # 使用最近邻插值
-                resampled_df = device_df.reindex(target_times, method='nearest')
+                resampled_df = device_df.reindex(target_times, method=reindex_method)
             except ValueError as e:
                 print(f"设备 {device_id} 处理时出错: {e}")
                 continue
